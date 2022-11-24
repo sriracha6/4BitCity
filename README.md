@@ -1,7 +1,7 @@
 # 4BitCity
 A 4x4 city builder game in the terminal
 
-Made in ~3 hours
+Made in ~2 hours
 For windows.
 
 Still needs balancing and more buildings and events.
