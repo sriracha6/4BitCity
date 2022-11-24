@@ -18,19 +18,26 @@ namespace _4BitCity
         static void MainMenu()
         {
             Console.Clear();
-            OutL("4BitCity\n", ConsoleColor.Red);
+            OutL("                     4BitCity\n", ConsoleColor.Red);
+            OutL("                       .|\r\n                       | |\r\n                       |'|            ._____\r\n               ___    |  |            |.   |' .---\"|\r\n       _    .-'   '-. |  |     .--'|  ||   | _|    |\r\n    .-'|  _.|  |    ||   '-__  |   |  |    ||      |\r\n    |' | |.    |    ||       | |   |  |    ||      |\r\n ___|  '-'     '    \"\"       '-'   '-.'    '`      |____\r\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             OutL("[n] Start Game");
             OutL("[l] Load Game");
             OutL("[i] Info");
+            OutL("[q] Quit");
 
-            var key = Console.ReadKey();
+            while(true)
+            {
+                var key = Console.ReadKey();
 
-            if(key.Key == ConsoleKey.N)
-                StartNewGame();
-            if (key.Key == ConsoleKey.L)
-                LoadSaveGame();
-            if (key.Key == ConsoleKey.I)
-                Tutorial();
+                if(key.Key == ConsoleKey.N)
+                    StartNewGame();
+                if (key.Key == ConsoleKey.L)
+                    LoadSaveGame();
+                if (key.Key == ConsoleKey.I)
+                    Tutorial();
+                if(key.Key == ConsoleKey.Q)
+                    Environment.Exit(0);
+            }
         }
 
         static void Tutorial()
